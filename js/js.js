@@ -10,10 +10,12 @@ fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
 
 $(window).resize(function () {
     var viewportWidth = $(window).width();
-    if (viewportWidth < 600) {
+    if (viewportWidth < 750) {
             $("#tdiv").removeClass("row");
+            $("#rdiv").removeClass("row");
     }
-    if (viewportWidth > 600) {
+    if (viewportWidth > 750) {
         $("#tdiv").addClass("row");
+        $("#rdiv").addClass("row");
 }
 });
