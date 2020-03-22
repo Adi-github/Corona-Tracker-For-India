@@ -42,6 +42,14 @@
     align-items: center;
 }
 
+
+img {
+  width: 100px;
+  height: 80px;
+}
+
+
+
 .design {
     margin-top: 3%;
     padding: 15px;
@@ -76,7 +84,7 @@ body{
 
 @media only screen and (min-width: 750px) and (max-width: 1240px) {
     #heading {
-      margin-left: 22%;
+      margin-left: 17%;
       
     }
     #map_div {
@@ -86,7 +94,7 @@ body{
 
   @media only screen and (max-width: 749px) {
     #heading {
-      margin-left: 25%;
+      margin-left: 20%;
       font-size: 30px;
     }
     #map_div {
@@ -98,14 +106,30 @@ body{
     
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 300px) {
     #heading {
-      margin-left: 12%;
-      font-size: 25px;
+      margin-left: 5% !important;
+      font-size: 12px !important;
+    }
+    img {
+      width: 40px;
+      height: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #heading {
+      margin-left: 15%;
+      font-size: 18px;
     }
     .design {
       font-size: 15px;
     }
+    img {
+      width: 50px;
+      height: 40px;
+    }
+    
   }
 
   @media only screen and (max-width: 300px) {
