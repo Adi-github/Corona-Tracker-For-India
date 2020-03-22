@@ -8,6 +8,7 @@ fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
     document.getElementById("Deaths").innerHTML=deaths; 
 })
 
+/*
 $(window).resize(function () {
     var viewportWidth = $(window).width();
     if (viewportWidth < 750) {
@@ -18,4 +19,4 @@ $(window).resize(function () {
         $("#tdiv").addClass("row");
         $("#rdiv").addClass("row");
 }
-});
+});*/

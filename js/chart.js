@@ -18,7 +18,7 @@ for (var i = 0; i < arrayLength; i++) {
   //  console.log(myStringArray[i]);
     const {state,confirmed,recovered,deaths,active} = myStringArray[i];
     console.log(state,confirmed,recovered,deaths,active);
-    
+
 }
 //const {state,active} = data.data.statewise[0];
 // console.log(state,active)
