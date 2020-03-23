@@ -13,6 +13,22 @@
     
 }
 
+table{
+  margin-left:15%;
+  width: 70%;
+  margin-top: 5%;
+  display: inline-table;
+  margin-bottom: 3%;
+  border-collapse: collapse;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+td,th {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+}
+
 #tdiv {
   width: 80%;
   margin-left: 15%;
@@ -26,16 +42,12 @@
     margin-top: 2%;
 }
 
-.v {
-    color: white;
-}
 
 #map {
     height: 380px;
 }
 
 #map_text {
-    color: white;
     font-size: 43px;
     text-align: center;
     margin-top: 15%;
@@ -58,14 +70,33 @@ img {
   height: 80px;
 }
 
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#click {
+  width: 30%;
+  margin-left: 40%;
+  margin-top: 2%;
+  padding: 10px;
+  border: red solid;
+  text-align: center;
+}
 
 
 .design {
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 2%;
     padding: 10px;
     text-align: center;
-    color: white;
     background-color: black;
     border-style: solid;
   border-color: red;
@@ -88,6 +119,7 @@ img {
 body{
 
     background-color: black;
+    color: white;
 }
 .design p {
     margin-top: 20px ;
@@ -96,6 +128,11 @@ body{
 
 @media only screen and (max-width: 420px) {
     
+  table{
+    margin-left: 1%;
+    width: 30%;
+  }
+
   .design {
     font-size: 14px;
     padding: 5px;
@@ -119,6 +156,7 @@ body{
     margin-left: 18%;
     font-size: 30px;
   }
+ 
   
 }
 
@@ -129,5 +167,6 @@ body{
 margin-top: 5%;
 height: 300px;
 }
+
 
 }
