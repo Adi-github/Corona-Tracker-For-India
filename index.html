@@ -1,5 +1,6 @@
 <html>
     <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Corona Update</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -19,22 +20,25 @@
 
     </head>
     <body>
-        <div id="tmdiv" class="container">
-            <div id="tdiv" class="row" >
-            <div class=" design col " id="t">Total Cases  <p><span id="total" ></span></p></div> 
-            <div class=" design col " id="i">Active <p><span id="Indian" ></span></p></div> 
-            <div class=" design col " id="ds"> Recovered <p><span id="Discharged" ></span></p></div> 
-            <div class=" design col " id="d">  Deaths <p><span id="Deaths" ></span></p></div>
-        </div>
-    </div>
+     
     <div class="container" id="map_div" >
     <div class="row" id="rdiv">
             <div class="col map_text_box">
-                <p id="map_text">
+
+                <div id="tmdiv" class="container">
+                    <div id="tdiv" class="row">
+                    <div class=" design col " id="t">Total Cases  <p><span id="total" ></span></p></div> 
+                    <div class=" design col " id="i">Active <p><span id="Indian" ></span></p></div> 
+                    
+                </div><div id="tdiv" class="row">
+                <div class=" design col " id="ds"> Recovered <p><span id="Discharged" ></span></p></div> 
+                    <div class=" design col " id="d">  Deaths <p><span id="Deaths" ></span></p></div>
+            </div></div>
+                <!--<p id="map_text">
                             
                     States Affected In India
 
-                </p>
+                </p>-->
     </div>
 
    <div id="mapid"></div>
