@@ -21,13 +21,13 @@ var t = document.getElementById("table");
     //console.log(state,confirmed,recovered,deaths,active);
  
 }*/
-for (let index = 1; index < t.rows.length; index++) {
+for (let index = 0; index < t.rows.length; index++) {
   for (let d = 0; d < t.rows[index].cells.length; d++) {
-    t.rows[index].cells[0].innerHTML = myStringArray[index].state;
-    t.rows[index].cells[1].innerHTML = myStringArray[index].confirmed;
-    t.rows[index].cells[2].innerHTML = myStringArray[index].recovered;
-    t.rows[index].cells[3].innerHTML = myStringArray[index].deaths;
-    t.rows[index].cells[4].innerHTML = myStringArray[index].active;
+    t.rows[index+1].cells[0].innerHTML = myStringArray[index].state;
+    t.rows[index+1].cells[1].innerHTML = myStringArray[index].confirmed;
+    t.rows[index+1].cells[2].innerHTML = myStringArray[index].recovered;
+    t.rows[index+1].cells[3].innerHTML = myStringArray[index].deaths;
+    t.rows[index+1].cells[4].innerHTML = myStringArray[index].active;
   }
   
 }
