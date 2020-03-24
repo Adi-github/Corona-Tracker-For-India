@@ -64,10 +64,5 @@ $(function() {
 
   });});
 });
-$("#tablewrapper").hide();
-
-$("#states").click(function(){
-  $("#tablewrapper").toggle();
-}); 
 
 
