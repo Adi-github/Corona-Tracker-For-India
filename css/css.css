@@ -4,15 +4,12 @@
     justify-content: center;
     margin-left: 30%;
     max-width: 100%;
-
 }
 
 #tmdiv {
     max-width: 100% !important;
     width: 85%;
-    
 }
-
 
 #table{
   margin-left:25%;
@@ -115,11 +112,6 @@ a:visited {
 
 }
 
-#datalink {
-  width: 81%;
-  margin-top: -38px;
-}
-
 .design {
   color: #aaaaaa;
     margin-top: 5%;
@@ -127,7 +119,6 @@ a:visited {
     padding: 10px;
     text-align: center;
     background-color: #262529;
-    
    border-radius: 10px;
   font-size: 20px;
 }
@@ -152,19 +143,6 @@ a:visited {
   font-weight: bold;
 }
 
-/*#d {
-    background-color: red;
-    animation-name: blinking;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes blinking {
-    0%   {background-color: red;}
-    50%  {background-color: black;}
-    100% {background-color: red;}
-  }*/
-
 body{
 
     background-color: black;
@@ -172,6 +150,22 @@ body{
 }
 .design p {
     margin-top: 20px ;
+}
+
+th {
+  background-color: red;
+}
+
+table.striped > tbody > tr:nth-child(even) {
+  background-color: rgb(33, 152, 221);
+  color: #111010;
+  font-weight: bold;
+}
+
+table.striped > tbody > tr:nth-child(odd) {
+  background-color: yellowgreen;
+  color: #111010;
+  font-weight: bold;
 }
 
 
