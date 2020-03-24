@@ -42,12 +42,12 @@ setTimeout(function(){
 $("#mapid2").hide();
 
 $(document).ready(function(){
-$(function() {
+  
   $("#mode").click(function() {
     $("body").toggleClass("light");
     $("#mapid2").toggle();
     $("#mapid").toggle();
-    
+
     $("#t").toggleClass("design");
     $("#i").toggleClass("design");
     $("#t").toggleClass("design1");
@@ -64,12 +64,7 @@ $(function() {
     $("#o").toggleClass("design1");
     $("#p").toggleClass("design1");
 
-
-
-
-    $("#map_div").load(window.location.href + " #map_div" );
-
-  });});
+  });
 });
 
 
