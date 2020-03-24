@@ -157,15 +157,14 @@ th {
 }
 
 table.striped > tbody > tr:nth-child(even) {
-  background-color: rgb(33, 152, 221);
-  color: #111010;
-  font-weight: bold;
+  background-color: #262529;
+  color: white;
 }
 
 table.striped > tbody > tr:nth-child(odd) {
-  background-color: yellowgreen;
-  color: #111010;
-  font-weight: bold;
+  background-color: black;
+  color: white;
+ 
 }
 
 
