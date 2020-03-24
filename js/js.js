@@ -34,4 +34,40 @@ for (let index = 0; index < t.rows.length; index++) {
 
 } )
 
+setTimeout(function(){
+   window.location.reload(1);
+}, 900000);
+
+
+$("#mapid2").hide();
+
+$(document).ready(function(){
+$(function() {
+  $("#mode").click(function() {
+    $("body").toggleClass("light");
+    $("#mapid2").toggle();
+    $("#mapid").toggle();
+    $("#t").toggleClass("design");
+    $("#i").toggleClass("design");
+    $("#ds").toggleClass("design");
+    $("#d").toggleClass("design");
+
+    $("#t").toggleClass("design1");
+    $("#i").toggleClass("design1");
+    $("#d").toggleClass("design1");
+    $("#ds").toggleClass("design1");
+    $("#patient").toggleClass("click");
+    $("#states").toggleClass("click");
+    $("#patient").toggleClass("click1");
+    $("#states").toggleClass("click1");
+    $("#map_div").load(window.location.href + " #map_div" );
+
+  });});
+});
+$("#tablewrapper").hide();
+
+$("#states").click(function(){
+  $("#tablewrapper").toggle();
+}); 
+
 
