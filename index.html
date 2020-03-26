@@ -1,52 +1,131 @@
 <html>
-    <head><meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Corona Update</title>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Corona Update</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin=""/>
-    
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
-        <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <div id="hd"><span id="heading"><img src="img/covid.png" alt="covid"> Corona Virus Tracker India </span></div>
-        <link rel="stylesheet" href="css/css.css">
-        <script type="module" src="js/js.js"></script>
-        <script type="module" src="js/map.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+    --><div id="hd"><span id="heading"><img src="img/covid.png" alt="covid"> Corona Virus Tracker India </span></div>
+    <link rel="stylesheet" href="css/css.css">
+    <script type="module" src="js/js.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
 
-    </head>
-    <body>
-     <div id="mode"><img src="img/light.png" id="modeimg"></div>
-            <div class="container" id="map_div" >
-                            <div class="row" id="rdiv">
-                                    <div class="col map_text_box">
-                                            <div id="tmdiv" class="container">
-                                                    <div class="row tdiv">
-                                                            <div class=" design col " id="t"><p>Total Cases</p>  <p><span id="total" ></span></p></div> 
-                                                            <div class=" design col " id="i"><p>Active</p> <p><span id="Indian" ></span></p></div>                     
-                                                    </div>
-                                                    <div class="row tdiv">
-                                                            <div class=" design col " id="ds"><p> Recovered </p><p><span id="Discharged" ></span></p></div> 
-                                                            <div class=" design col " id="d"> <p> Deaths </p><p><span id="Deaths" ></span></p></div>
-                                                    </div>
-                                                    <div class="row tdiv">
-                                                            <div  class="col design" id="o"> <a href="table.html"><p> Get Statewise Data Table</p></a></div> 
-                                                            <div  class="col design" id="p"><p> Get Patients Data Table</p></div>
-                                                    </div> 
-                                                </div>
-                                    </div>
-                                                    <div id="mapid"></div>
-                                                    <div id="mapid2" class="mlc"></div>
-                            </div>
+<body>
+    <div id="mode"><img src="img/light.png" id="modeimg"></div>
+    <div class="container" id="map_div">
+        <div class="row" id="rdiv">
+            <div id="mapid" class="col l6 s6 m6"></div>
+            <div id="mapid2" class="mlc col l6 s6 m4"></div>
+            <div class="col map_text_box l4 m12 s12">
+                <div id="tmdiv" class="container">
+                    <div class="row tdiv">
+                        <div class=" design col l6 s6 m4" id="t">
+                            <p>Total Cases</p>
+                            <p><span id="total"></span></p>
+                        </div>
+                        <div class=" design col l4 s4 m4" id="i">
+                            <p>Active</p>
+                            <p><span id="Indian"></span></p>
+                        </div>
+                    </div>
+                    <div class="row tdiv">
+                        <div class=" design col l6 s6 m4" id="ds">
+                            <p> Recovered </p>
+                            <p><span id="Discharged"></span></p>
+                        </div>
+                        <div class=" design col l4 s4 m4" id="d">
+                            <p> Deaths </p>
+                            <p><span id="Deaths"></span></p>
+                        </div>
+                    </div>
+                    <div class="row tdiv">
+                        <div class="col design l6 s6 m4" id="o"> <a href="table.html">
+                                <p> Get Statewise Data Table</p>
+                            </a></div>
+                        <div class="col design l4 s4 m4" id="p">
+                            <p> Get Patients Data Table</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div id="bcontainer">
+        <div class="container section">
+            <div class="row mr">
+                <div class="col s12 l6 m4 textc valign-wrapper center-block">
+                    <h6>
+                        Total Samples Tested <P>Compared To</P>
+                        <p>Positive Found</p>
+                    </h6>
+                </div>
+                <div class="chart-container col m8 l6 s14">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="row mr">
+                <div class="chart-containe col m8 l6 s14">
+                    <canvas id="Chart"></canvas>
+                </div>
+                <div class="col s12 l6 m4 textc valign-wrapper center-block">
+                    <h6>
+                        Daily Confirmed, Daily Recovered, Daily Deceased Cases<P>Are</P>
+                        <p>Compared</p>
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="row mr">
+                <div class="col s12 l6 m4 textc valign-wrapper center-block">
+                    <h6>
+                        Total Confirmed, Total Recovered, Total Deceased Cases<P>Are</P>
+                        <p>Compared</p>
+                    </h6>
+                </div>
+                <div class="chart-contain col m8 l6 s12">
+                    <canvas id="cChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="row mr">
+                <div class="chart-contai col m8 l6 s12">
+                    <canvas id="gChart"></canvas>
+                </div>
+                <div class="col s12 l6 m4 textc valign-wrapper center-block">
+                    <h6>Total Cases In World <p>Compared To</p>
+                        <p>Total Cases In India</p>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/chart.js"></script>
+
 </body>
+
 </html>

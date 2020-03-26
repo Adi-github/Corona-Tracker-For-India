@@ -1,88 +1,60 @@
-#heading{
-    font-size: 50px;
-    color: red;
-    justify-content: center;
-    margin-left: 30%;
-    max-width: 100%;
+html,
+body {
+  height: 100%;
+  color: beige;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+#heading {
+  font-size: 42px;
+  color: red;
+  justify-content: center;
+  max-width: 100%;
+}
+
+h6 {
+  margin-top: 16% !important;
+  color: beige;
+}
+
+.textc {
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  color: wheat;
+}
+
+.chart-container,
+.chart-containe,
+.chart-contain {
+  position: relative;
+  width: 90vw;
 }
 
 #tmdiv {
-    max-width: 100% !important;
-    width: 85%;
-}
-
-#table{
-  margin-left:25%;
-  width: 50% !important;
-  margin-top: 1%;
-  display: inline-table;
-  margin-bottom: 3%;
-  border: solid rgb(255, 255, 255) 1px;
-  overflow-x: auto;
-}
-
-td,th {
-  padding: 15px;
-  text-align: center;
-  border: 1px solid rgb(255, 255, 255);
-}
-
-.tdiv {
-  width: 80%;
-  margin-left: 15%;
+  max-width: 100% !important;
+  width: 100%;
 }
 
 .mlc {
   display: none;
 }
 
-
-#mapid { height: 420px; width: 50%;}
-#mapid2 { height: 420px; width: 50%;}
-
-#hd {
-    margin-top: 2%;
-}
-
-
-#map {
-    height: 380px;
-}
-
-#map_text {
-    font-size: 43px;
-    text-align: center;
-    margin-top: 15%;
-    margin-right: 25%;
-}
-
-#map_div {
-    margin-top: 1%;
-    width: 100% !important;
-}
-
-.map_text_box {
-    text-align: center;
-    align-items: center;
-}
-
-
 img {
-  width: 100px;
-  height: 80px;
+  width: 55px;
+  height: 35px;
 }
 
-#i p{
+#i p {
   color: rgb(37, 75, 201);
 }
 
 #ds p {
   color: greenyellow;
-}
-
-.light {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0) !important;
 }
 
 a:link {
@@ -97,41 +69,31 @@ a:visited {
   text-decoration: none;
 }
 
-#mode {
-  position: fixed;
-  margin-left: 95%;
-  margin-top: -70px;
-  cursor: pointer;
- 
-}
 
-#modeimg {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-
+.mr {
+  margin-top: 5%;
 }
 
 .design {
   color: #aaaaaa;
-    margin-top: 5%;
-    margin-left: 2%;
-    padding: 10px;
-    text-align: center;
-    background-color: #262529;
-   border-radius: 10px;
-  font-size: 20px;
+  margin-top: 5%;
+  padding: 10px !important;
+  text-align: center;
+  background-color: #262529;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-left: 2% !important;
 }
 
 .design1 {
   color: #111010;
-    margin-top: 5%;
-    margin-left: 2%;
-    padding: 10px;
-    text-align: center;
-    background-color: #cad2d3;
-   border-radius: 10px;
-  font-size: 20px;
+  margin-top: 5%;
+  margin-left: 2% !important;
+  padding: 10px !important;
+  text-align: center;
+  background-color: #cad2d3;
+  border-radius: 10px;
+  font-size: 15px;
 }
 
 
@@ -139,60 +101,146 @@ a:visited {
   color: red;
 }
 
-#t,#ds {
-  font-weight: bold;
-}
-
-body{
-
-    background-color: black;
-    color: white;
-}
 .design p {
-    margin-top: 18px ;
+  margin-top: 18px;
+}
+
+
+/** Mode */
+
+.light {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0) !important;
+}
+
+#mode {
+  position: fixed;
+  margin-left: 95%;
+  margin-top: -70px;
+  cursor: pointer;
+
+}
+
+#modeimg {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+
+/** Map */
+
+#mapid {
+  height: 420px;
+  width: 50%;
+}
+
+#mapid2 {
+  height: 420px;
+  width: 50%;
+}
+
+#hd {
+  margin-top: 2%;
+}
+
+
+#map {
+  height: 380px;
+}
+
+#map_text {
+  text-align: center;
+  margin-top: 15%;
+  margin-right: 25%;
+}
+
+#map_div {
+  margin-top: 1%;
+}
+
+.map_text_box {
+  text-align: center;
+  align-items: center;
+  margin-left: 15% !important;
+}
+
+
+/**  Table  */
+
+
+#table {
+  margin-top: 1%;
+  display: inline-table;
+  margin-bottom: 3%;
+  border: solid rgb(255, 255, 255) 1px;
+  overflow-x: auto;
+}
+
+td,
+th {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
 }
 
 th {
   background-color: red;
 }
 
-table.striped > tbody > tr:nth-child(even) {
+table.striped>tbody>tr:nth-child(even) {
   background-color: #262529;
   color: white;
 }
 
-table.striped > tbody > tr:nth-child(odd) {
+table.striped>tbody>tr:nth-child(odd) {
   background-color: black;
   color: white;
- 
+
+}
+
+#statewise {
+  margin-left: 2%;
+  margin-top: 1%;
+  color: red;
+  font-size: 40px;
 }
 
 
+/** Media Queries*/
+
+
 @media only screen and (max-width: 420px) {
-  
-  #table{
+
+  .map_text_box {
+    margin-left: 5% !important;
+  }
+
+  #table {
     margin-left: 1%;
     width: 30%;
   }
 
   .design {
-    font-size: 14px;
     padding: 5px;
   }
+
   #heading {
     margin-left: 3%;
     font-size: 25px;
   }
+
   img {
     width: 38px;
     height: 23px;
   }
+
   .tdiv {
     width: 107%;
     margin-left: -7px;
   }
 
- 
+
 }
 
 @media only screen and (min-width: 421px) and (max-width: 1024px) {
@@ -200,24 +248,47 @@ table.striped > tbody > tr:nth-child(odd) {
     margin-left: 18%;
     font-size: 30px;
   }
- 
-  
+
+
 }
+
+@media only screen and (min-width: 601px) and (max-width: 980px) {
+
+  #mapid {
+    height: 420px;
+    width: 100%;
+  }
+
+  #mapid2 {
+    height: 420px;
+    width: 100%;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
-#mapid {
-  width: 80%;
-  margin-left: 10%;
-margin-top: 15%;
-height: 300px;
-}
+  #mapid {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15%;
+    height: 300px;
+  }
 
 
 }
 
-#statewise {
-  margin-left: 42%;
-  margin-top: 1%;
-  color: red;
-  font-size: 40px;
+@media screen and (max-width:600px) {
+  .textc {
+
+    margin-bottom: 15px;
+  }
+
+}
+
+@media screen and (min-width:1100px) {
+  .textc {
+
+    height: 35%;
+  }
+
 }
