@@ -1,3 +1,16 @@
+let con = []
+let conn = []
+fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
+.then(response => response.json())
+.then(data => {
+  let ma = data.data.statewise;
+  for (let index = 0; index < ma.length; index++) {
+   
+    con = ma[index].confirmed
+    conn.push(con)
+  }
+})
+
 var mymap = L.map('mapid').setView([20.5937, 78.9629], 4);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 
@@ -30,6 +43,7 @@ let latlong = [
   [20.940920, 84.803467],
   [32.084206, 77.571167]
 ]
+console.log(conn)
 for (let index = 0; index < latlong.length; index++) {
   const element = latlong[index];
   var redIcon = new L.Icon({
@@ -40,12 +54,17 @@ for (let index = 0; index < latlong.length; index++) {
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
   });
+
+  
+
   var marker = L.marker(element, {
     icon: redIcon
   }).addTo(mymap);
-
-  marker.bindPopup("Confirmed");
+  
+  marker.bindPopup(conn[index])
+  
 }
+
 $('.leaflet-control-attribution').hide()
 
 

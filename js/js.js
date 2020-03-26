@@ -40,7 +40,9 @@ $("#mapid2").hide();
 
 $(document).ready(function () {
   $("#mode").click(function () {
+    $("html").toggleClass("light");
     $("body").toggleClass("light");
+    $("h6").toggleClass("lighth6");
     $("#mapid2").toggle();
     $("#mapid").toggle();
 
