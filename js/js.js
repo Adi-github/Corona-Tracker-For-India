@@ -14,23 +14,6 @@ fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
   })
 
 
-fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
-  .then(response => response.json())
-  .then(data => {
-    var myStringArray = data.data.statewise;
-    var arrayLength = myStringArray.length;
-    var t = document.getElementById("table");
-    for (let index = 0; index < t.rows.length; index++) {
-      for (let d = 0; d < t.rows[index].cells.length; d++) {
-        t.rows[index + 1].cells[0].innerHTML = myStringArray[index].state;
-        t.rows[index + 1].cells[1].innerHTML = myStringArray[index].confirmed;
-        t.rows[index + 1].cells[2].innerHTML = myStringArray[index].recovered;
-        t.rows[index + 1].cells[3].innerHTML = myStringArray[index].deaths;
-        t.rows[index + 1].cells[4].innerHTML = myStringArray[index].active;
-      }
-    }
-  })
-
 setTimeout(function () {
   window.location.reload(1);
 }, 900000);
@@ -62,5 +45,73 @@ $(document).ready(function () {
     $("#o").toggleClass("design1");
     $("#p").toggleClass("design1");
 
+  });
+});
+
+
+$(document).ready(function () {
+  $.getJSON("https://api.rootnet.in/covid19-in/unofficial/covid19india.org", function (data) {
+      $('#data-table').DataTable({
+          "data": data.data.rawPatientData,
+          columns: [{
+                  "data": "patientId",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "gender",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "city",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "state",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "status",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "sources",
+                  "defaultContent": "<i>Not Available</i>"
+              }
+          ]
+      });
+  });
+});
+
+$(document).ready(function () {
+  $.getJSON("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise", function (data) {
+      $('#dat-table').DataTable({
+          "data": data.data.statewise,
+          columns: [{
+                  "data": "state",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "confirmed",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "recovered",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              
+              {
+                  "data": "active",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
+                  "data": "deaths",
+                  "defaultContent": "<i>Not Available</i>"
+              }
+      ],
+
+
+      
+      "order" : [[ 1, "desc" ]]
+      });
   });
 });
