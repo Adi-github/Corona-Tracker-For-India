@@ -44,14 +44,26 @@ function chartit() {
             ]
         },
         options: {
+            legend: {
+                 labels: {
+                      fontColor: '#f5c36a'
+                     }
+                  },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
-                    }
+                        beginAtZero:true,
+                        fontColor: '#f5c36a'
+                    },
+                }],
+              xAxes: [{
+                    ticks: {
+                        fontColor: '#f5c36a'
+                    },
                 }]
-            }
-        }
+            } 
+    
+        } 
     });
 
     /**Chart 2 */
@@ -88,15 +100,28 @@ function chartit() {
             ]
         },
         options: {
+            legend: {
+                 labels: {
+                      fontColor: '#f5c36a'
+                     }
+                  },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        beginAtZero:true,
+                        fontColor: '#f5c36a'
+                    },
+                }],
+              xAxes: [{
+                    ticks: {
+                        fontColor: '#f5c36a'
                     },
                 }]
-            }
-        }
+            } 
+    
+        } 
     });
+    
 
     /**Chart 3 */
 
@@ -131,14 +156,26 @@ function chartit() {
             ]
         },
         options: {
+            legend: {
+                 labels: {
+                      fontColor: '#f5c36a'
+                     }
+                  },
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
-                    }
+                        beginAtZero:true,
+                        fontColor: '#f5c36a'
+                    },
+                }],
+              xAxes: [{
+                    ticks: {
+                        fontColor: '#f5c36a'
+                    },
                 }]
-            }
-        }
+            } 
+    
+        } 
     });
 
     /**Chart 4 */
@@ -150,10 +187,17 @@ function chartit() {
             labels: ["Total Confirmed Cases In World", 'Total Confirmed Cases In India'],
             datasets: [{
                 data: [hn, ko],
-                backgroundColor: ['white', 'red'],
+                backgroundColor: ['red', 'white'],
                 borderColor: 'grey',
                 borderWidth: 1
             }]
-        },
+        },  options: {
+            legend: {
+                 labels: {
+                      fontColor: '#f5c36a'
+                     }
+                  }
+    
+        } 
     });
 }
