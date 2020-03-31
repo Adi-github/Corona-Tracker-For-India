@@ -74,7 +74,7 @@ $(document).ready(function () {
                   "defaultContent": "<i>Not Available</i>"
               },
               {
-                  "data": "sources",
+                  "data": "notes",
                   "defaultContent": "<i>Not Available</i>"
               }
           ]
