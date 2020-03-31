@@ -77,7 +77,8 @@ $(document).ready(function () {
                   "data": "notes",
                   "defaultContent": "<i>Not Available</i>"
               }
-          ]
+          ],
+          "pageLength":50
       });
   });
 });
@@ -111,7 +112,8 @@ $(document).ready(function () {
 
 
       
-      "order" : [[ 1, "desc" ]]
+      "order" : [[ 1, "desc" ]],
+      "paging": false
       });
   });
 });

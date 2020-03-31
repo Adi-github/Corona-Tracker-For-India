@@ -168,9 +168,21 @@ a:visited {
 
 /**  Table  */
 
+#href img {
+  width: 30px;
+  height: 30px;
+}
+
+#href {
+font-size: 14px;
+color: red;
+margin-right: 22%;
+height: 50px;
+margin-left: -265px;
+}
 
 #pname {
-  margin-left: 4%;
+  margin-left: 1%;
   margin-top: 2%;
   font-size: 30px;
   color: red;
