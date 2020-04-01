@@ -42,28 +42,7 @@ function chartit() {
                     spanGaps: false,
                 }
             ]
-        },
-        options: {
-            legend: {
-                 labels: {
-                      fontColor: '#f5c36a'
-                     }
-                  },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true,
-                        fontColor: '#f5c36a'
-                    },
-                }],
-              xAxes: [{
-                    ticks: {
-                        fontColor: '#f5c36a'
-                    },
-                }]
-            } 
-    
-        } 
+        }
     });
 
     /**Chart 2 */
@@ -98,28 +77,7 @@ function chartit() {
                     borderWidth: 1
                 }
             ]
-        },
-        options: {
-            legend: {
-                 labels: {
-                      fontColor: '#f5c36a'
-                     }
-                  },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true,
-                        fontColor: '#f5c36a'
-                    },
-                }],
-              xAxes: [{
-                    ticks: {
-                        fontColor: '#f5c36a'
-                    },
-                }]
-            } 
-    
-        } 
+        }
     });
     
 
@@ -154,28 +112,7 @@ function chartit() {
                     spanGaps: false,
                 }
             ]
-        },
-        options: {
-            legend: {
-                 labels: {
-                      fontColor: '#f5c36a'
-                     }
-                  },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true,
-                        fontColor: '#f5c36a'
-                    },
-                }],
-              xAxes: [{
-                    ticks: {
-                        fontColor: '#f5c36a'
-                    },
-                }]
-            } 
-    
-        } 
+        }
     });
 
     /**Chart 4 */
@@ -191,13 +128,6 @@ function chartit() {
                 borderColor: 'grey',
                 borderWidth: 1
             }]
-        },  options: {
-            legend: {
-                 labels: {
-                      fontColor: '#f5c36a'
-                     }
-                  }
-    
-        } 
+        }
     });
 }

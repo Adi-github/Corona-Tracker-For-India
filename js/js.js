@@ -62,6 +62,10 @@ $(document).ready(function () {
                   "defaultContent": "<i>Not Available</i>"
               },
               {
+                  "data": "ageEstimate",
+                  "defaultContent": "<i>Not Available</i>"
+              },
+              {
                   "data": "city",
                   "defaultContent": "<i>Not Available</i>"
               },
