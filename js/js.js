@@ -19,6 +19,9 @@ setTimeout(function () {
 }, 900000);
 
 
+
+
+
 $("#mapid2").hide();
 
 $(document).ready(function () {
@@ -83,7 +86,7 @@ $(document).ready(function () {
         }
       ],
       "lengthChange": false,
-      "pageLength": 4,
+      "pageLength": 5,
       "bInfo": false
     });
   });
@@ -115,9 +118,6 @@ $(document).ready(function () {
           "defaultContent": "<i>Not Available</i>"
         }
       ],
-
-
-
       "order": [
         [1, "desc"]
       ],
@@ -127,6 +127,7 @@ $(document).ready(function () {
     });
   });
 });
+
 
 $(document).ready(function () {
   $('.tabs').tabs();

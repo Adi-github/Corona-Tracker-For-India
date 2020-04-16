@@ -11,7 +11,7 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
-    <!-- <div id="hd"><span id="heading"><img src="img/covid.png" alt="covid"> Corona Tracker India </span></div> -->
+     <div id="hd"><span id="heading"><img src="img/covid.png" alt="covid"> Corona Tracker </span></div> 
     <link rel="stylesheet" href="css/css.css">
     <script type="module" src="js/map.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -23,13 +23,7 @@
 </head>
 
 <body>
-    <div class="" id="map_div" loading="lazy">
-        <div class="col" id="rdiv">
-            <div id="mapid" class="col l6 s4 m6 custom-popup"></div>
-            <div id="mapid2" class="mlc col l6 s4 m4"></div>
-
-        </div>
-    </div>
+  
 
     <section id="bcontainer">
 
@@ -157,11 +151,9 @@
                                     <th>City</th>
                                     <th>State</th>
                                     <th>Status</th>
-                                    <th word-wrap: break-word>Notes</th>
+                                    <th id="sliceli" word-wrap: break-word>Notes</th>
                                 </tr>
                             </thead>
-                
-                
                         </table>
                     </div></div>
                 </p>
@@ -176,9 +168,23 @@
             </ul>
         </div>
     </section>
+
+    <div class="row">
+        <div class="col l6 s12"> <section id="mapsection">
+            <p>
+        
+            <div class="" id="map_div" loading="lazy">
+                <div class="col" id="rdiv">
+                    <div id="mapid" class="col l6 s4 m6 custom-popup"></div>
+                </div>
+            </div></p></section>
+        </div>
+        <div class="col l6 s12 map_text_box"> <h5> Map Representation Of Affected States !</h5></div>
+      </div>
+
     <div class="row container" id="impinfo">
         <div id="hd"><span id="heading">Important Info</span></div>
-        <hr style="border:0.1rem solid rgb(212, 212, 212);; width:30%">
+        <hr style="border:0.1rem solid rgb(212, 212, 212);; width:30%; margin-bottom: 2%;">
         <div class="col l4">
             <div class="card-panel grey darken-4 help cradius">
                 <span class="white-text">
