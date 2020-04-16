@@ -30,7 +30,8 @@ function chartit() {
                     data: y,
                     backgroundColor: 'grey',
                     borderColor: 'grey',
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill:false
                 },
 
                 {
@@ -40,6 +41,7 @@ function chartit() {
                     borderColor: "rgba(255, 99, 132, 1)",
                     data: l,
                     spanGaps: false,
+                    fill:false
                 }
             ]
         }
@@ -57,7 +59,8 @@ function chartit() {
                     data: z,
                     backgroundColor: 'grey',
                     borderColor: 'grey',
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill:false
                 },
 
                 {
@@ -66,7 +69,8 @@ function chartit() {
                     backgroundColor: "rgba(255, 99, 132, 1)",
                     borderColor: "rgba(255, 99, 132, 1)",
                     data: ew,
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill:false
                 },
                 {
                     label: "Daily Recovered",
@@ -74,18 +78,32 @@ function chartit() {
                     backgroundColor: "white",
                     borderColor: "white",
                     data: v,
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill:false
                 }
             ]
-        }
-    });
+        },
+        options: {
+            plugins: {
+                datalabels: {
+                    color: 'white',
+                    display: function(context) {
+                        return context.dataset.data[context.dataIndex] > 15;
+                    },
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: Math.round
+                }
+            }
+    }});
     
 
     /**Chart 3 */
 
     var ctz = document.getElementById('cChart').getContext('2d');
     var cChart = new Chart(ctz, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: m,
             datasets: [{
@@ -93,7 +111,8 @@ function chartit() {
                     data: nm,
                     backgroundColor: 'grey',
                     borderColor: 'grey',
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill:false
                 },
                 {
                     label: "Total Deceased",
@@ -102,6 +121,7 @@ function chartit() {
                     borderColor: "rgba(255, 99, 132, 1)",
                     data: mk,
                     spanGaps: false,
+                    fill:false
                 },
                 {
                     label: "Total Recovered",
@@ -110,6 +130,7 @@ function chartit() {
                     borderColor: "white",
                     data: xz,
                     spanGaps: false,
+                    fill:false
                 }
             ]
         }

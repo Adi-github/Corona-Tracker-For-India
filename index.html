@@ -11,120 +11,252 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
-    <div id="hd"><span id="heading"><img src="img/covid.png" alt="covid"> Corona Tracker India </span></div>
+    <!-- <div id="hd"><span id="heading"><img src="img/covid.png" alt="covid"> Corona Tracker India </span></div> -->
     <link rel="stylesheet" href="css/css.css">
-    <script type="module" src="js/js.js"></script>
     <script type="module" src="js/map.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:ital@1&display=swap' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" />
+
 </head>
 
 <body>
-    <div class="container" id="map_div">
-        <div class="row" id="rdiv">
-            <div id="mapid" class="col l6 s6 m6"></div>
-            <div id="mapid2" class="mlc col l6 s6 m4"></div>
-            <div class="col map_text_box l4 m12 s12">
-                <div id="tmdiv" class="container">
-                    <div class="row tdiv">
-                        <div class=" design col l6 s6 m4" id="t">
-                            <p>Total Cases</p>
-                            <p><span id="total"></span></p>
-                        </div>
-                        <div class=" design col l4 s4 m4" id="i">
-                            <p>Active</p>
-                            <p><span id="Indian"></span></p>
-                        </div>
-                    </div>
-                    <div class="row tdiv">
-                        <div class=" design col l6 s6 m4" id="ds">
-                            <p> Recovered </p>
-                            <p><span id="Discharged"></span></p>
-                        </div>
-                        <div class=" design col l4 s4 m4" id="d">
-                            <p> Deaths </p>
-                            <p><span id="Deaths"></span></p>
+    <div class="" id="map_div" loading="lazy">
+        <div class="col" id="rdiv">
+            <div id="mapid" class="col l6 s4 m6 custom-popup"></div>
+            <div id="mapid2" class="mlc col l6 s4 m4"></div>
+
+        </div>
+    </div>
+
+    <section id="bcontainer">
+
+        <div class="container">
+
+            <div id="test1" class="col s12">
+                <p>
+
+                    <div class="col design l4 s4 m4" id="o">
+                        <div id="lua">
+                            <p id="lasttext">Data Last Updated At <span id="timet"></span></p>
+                            <hr id="luahr" style="border:0.1rem solid rgb(212, 212, 212);; width:95%">
                         </div>
                     </div>
-                    <div class="row tdiv">
-                        <div class="col design l6 s6 m4" id="o"> <a href="table.html">
-                                <p> Get Statewise Data Table</p>
-                            </a></div>
-                        <div class="col design l4 s4 m4" id="p"> <a href="ptable.html">
-                            <p> Get Patients Data Table</p></a>
+                    <div class="col map_text_box l4 m12 s12">
+                        <div id="tmdiv" class="container">
+                            <div class="row tdiv">
+                                <div class=" design col l4 s4 m4" id="i">
+                                    <p><span id="total"></span></p>
+                                    <p>Confirmed</p>
+                                </div>
+                                <div class=" design col l4 s4 m4" id="ds">
+                                    <p><span id="Discharged"></span></p>
+                                    <p> Recovered </p>
+                                </div>
+                                <div class=" design col l4 s4 m4" id="d">
+                                    <p><span id="Deaths">%</span></p>
+                                    <p> Deaths </p>
+                                </div>
+                            </div>
+                            <div class="row tdiv ntd">
+                                <div class="col design l4 s4 m4" id="o"> <a href="table.html">
+                                        <span id="ftr"></span>
+                                        <p> Fatality Rate</p>
+                                    </a></div>
+                                <div class="col design l4 s4 m4" id="p"> <a href="ptable.html">
+                                        <span id="rr"></span>
+                                        <p> Recovery Rate</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                </p>
+            </div>
+            <div id="test2" class="col s12">
+                <p>
+
+
+                    <div id="tch">
+                        <div class="container section">
+                            <div class="row mr">
+
+                                <div class="chart-container col m8 l12 s14">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dch">
+                        <div class="container section">
+                            <div class="row mr">
+                                <div class="chart-containe col m8 l12 s14">
+                                    <canvas id="Chart"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="cch">
+                        <div class="container section">
+                            <div class="row mr">
+                                <div class="chart-contain col m8 l12 s12">
+                                    <canvas id="cChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="gch">
+                        <div class="container section">
+                            <div class="row mr">
+                                <div class="chart-contai col m8 l12 s12">
+                                    <canvas id="gChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+                <ul class="black tabs tabs-fixed-width tab-demo z-depth-1">
+                    <li class="tab"><a class="active" href="#tch">Samples</a></li>
+                    <li class="tab"><a href="#dch">Daily</a></li>
+                    <li class="tab"><a href="#cch">Total</a></li>
+                    <li class="tab"><a href="#gch">World Pie</a></li>
+                </ul>
+            </div>
+            <div id="test3" class="col s12">
+                <p>
+                    <div class="h">
+                        <table id="dat-table" class="table table-dark table-bordered table-striped" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>State</th>
+                                    <th>Confirmed</th>
+                                    <th>Recovered</th>
+                                    <th>Active</th>
+                                    <th>Deaths</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </p>
+            </div>
+            <ul class="black tabs tabs-fixed-width tab-demo z-depth-1">
+                <li class="tab"><a class="active" href="#test1">Summary</a></li>
+                <li class="tab"><a href="#test2">Charts</a></li>
+                <li class="tab"><a href="#test3">Table</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="row container" id="impinfo">
+        <div id="hd"><span id="heading">Important Info</span></div>
+        <hr style="border:0.1rem solid rgb(212, 212, 212);; width:30%">
+        <div class="col l4">
+            <div class="card-panel grey darken-4 help">
+                <span class="white-text">
+                    <span class="helpline">
+                        <p id="impitext">
+                            <h5>Important Links</h5>
+                        </p>
+                        <p>
+                            <h6>Helpline Numbers </h6> <a
+                                href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf">
+                                <p>https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf</p>
+                            </a>
+                        </p>
+                    </span>
+                    <span class="sym">
+                        <p> Symptoms <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">
+                                <p>https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html</p>
+                            </a> </p>
+                    </span>
+                    <span class="ayush">
+                        <p> Ayushman Bharat <br><br><a href="https://pmjay.gov.in/">
+                                <p>https://pmjay.gov.in/</p>
+                            </a> </p>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="col l4">
+            <div class="">
+                <span class="white-text"><a class="twitter-timeline" data-lang="en" data-width="400" data-height="410"
+                        data-theme="dark" href="https://twitter.com/MoHFW_INDIA">Tweets by Health Minstry</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </span>
+            </div>
+        </div>
+        <div class="col l4">
+            <div class="card-panel grey darken-4">
+                <span class="white-text"><b>Goverment Has launched Aarogye Setu App</b>
+                    <p> The App is aimed at augmenting the initiatives of the Government of India, particularly the
+                        Department of Health, in proactively reaching out to and informing the users of the app
+                        regarding risks, best practices and relevant advisories pertaining to the containment of
+                        COVID-19.</p>
+                    <p>Download </p>
+                    <p><a href="https://play.google.com/store/apps/details?id=nic.goi.aarogyasetu&hl=en_GB"
+                            target="_blank"> <img src="img/androidlogo.png" alt="Android" id="androidicon" /> </a>
+
+                        <a href="https://apps.apple.com/in/app/aarogyasetu/id1505825357" target="_blank"> <img
+                                src="img/applelogo.png" alt="Apple" id="appleicon" /> </a>
+                    </p>
+                </span>
             </div>
         </div>
     </div>
 
-    <div id="bcontainer">
-        <div class="container section">
-            <div class="row mr">
-                <div class="col s12 l6 m4 textc valign-wrapper center-block">
-                    <h6>
-                        Total Samples Tested <P>Compared To</P>
-                        <p>Positive Found</p>
-                    </h6>
-                </div>
-                <div class="chart-container col m8 l6 s14">
-                    <canvas id="myChart"></canvas>
-                </div>
+    <footer>
 
+        <div class="row">
+            <div class="col s4">
+                <div class="quote-box  quotediv">
+                    <h5>Here are some Messages</h5>
+
+                    <div class="quote-loop ">
+                        <p>&ldquo;#StaySafe&rdquo;</p>
+                    </div>
+                    <div class="quote-loop quote-hide">
+                        <p>&ldquo;#StayHome&rdquo;</p>
+                    </div>
+                    <div class="quote-loop quote-hide">
+                        <p>&ldquo; #Maintain_Social_Distancing&rdquo;</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <p> <span id="datas">Data Source </span> <img src="img/data.png" id="data" /></p>
+                <p>Covid19India</p>
+            </div>
+            <div class="col s4">Buy Me A <img src="img/coffeei.png" alt="Coffee" id="cicon">
+                <!--  <div class="coffee">Donate</div> -->
+                <div class="contact">Contact Us</div>
+                <p><img src="img/maili.png" alt="mail" id="micon"> </p>
             </div>
         </div>
 
-        <div class="container section">
-            <div class="row mr">
-                <div class="chart-containe col m8 l6 s14">
-                    <canvas id="Chart"></canvas>
-                </div>
-                <div class="col s12 l6 m4 textc valign-wrapper center-block">
-                    <h6>
-                        Daily Confirmed, Daily Recovered, Daily Deceased Cases<P>Are</P>
-                        <p>Compared</p>
-                    </h6>
-                </div>
-            </div>
-        </div>
+    </footer>
 
-        <div class="container section">
-            <div class="row mr">
-                <div class="col s12 l6 m4 textc valign-wrapper center-block">
-                    <h6>
-                        Total Confirmed, Total Recovered, Total Deceased Cases<P>Are</P>
-                        <p>Compared</p>
-                    </h6>
-                </div>
-                <div class="chart-contain col m8 l6 s12">
-                    <canvas id="cChart"></canvas>
-                </div>
-            </div>
-        </div>
 
-        <div class="container section">
-            <div class="row mr">
-                <div class="chart-contai col m8 l6 s12">
-                    <canvas id="gChart"></canvas>
-                </div>
-                <div class="col s12 l6 m4 textc valign-wrapper center-block">
-                    <h6>Total Cases In World <p>Compared To</p>
-                        <p>Total Cases In India</p>
-                    </h6>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/data.js"></script>
     <script src="js/chart.js"></script>
-
+    <script type="module" src="js/js.js"></script>
 </body>
 
 </html>

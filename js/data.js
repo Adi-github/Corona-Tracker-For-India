@@ -4,7 +4,7 @@ async function getData() {
     .then(data => {
       var myStringArray = data.tested;
       for (let index = 0; index < myStringArray.length; index++) {
-        h = (data.tested[index].updatetimestamp).slice(0, 4)
+        h = (data.tested[index].updatetimestamp).slice(0, 5)
         g.push(h)
         i = (data.tested[index].totalpositivecases)
         y.push(i)

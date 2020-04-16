@@ -5,7 +5,6 @@ fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
 .then(data => {
   let ma = data.data.statewise;
   for (let index = 0; index < ma.length; index++) {
-   
     con = ma[index].confirmed
     conn.push(con)
   }
@@ -13,7 +12,6 @@ fetch("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise")
 
 var mymap = L.map('mapid').setView([20.5937, 78.9629], 4);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-
   id: 'mapbox/dark-v10',
   tileSize: 512,
   zoomOffset: -1,
@@ -43,28 +41,36 @@ let latlong = [
   [20.940920, 84.803467],
   [32.084206, 77.571167]
 ]
-console.log(conn)
+
 for (let index = 0; index < latlong.length; index++) {
   const element = latlong[index];
-  var redIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  
-
-  var marker = L.marker(element, {
-    icon: redIcon
+    var circle = L.circle(element, {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 130000
   }).addTo(mymap);
   
-  marker.bindPopup(conn[index])
+  var popup = L.popup();
+
+  
+    
+    function onMapClick(e) {
+      
+      popup
+          .setLatLng(e.latlng)
+          .setContent("Confirmed Cases " + conn[index].toString())
+          .openOn(mymap); }
+  
+  
+  mymap.on('click', onMapClick);
+  
+
   
 }
+$('.leaflet-control-attribution').hide()
 
+/*
 $('.leaflet-control-attribution').hide()
 
 
@@ -77,32 +83,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: 'pk.eyJ1IjoiYWRpbmlkIiwiYSI6ImNqb2cyemVpczA5dmszcHF6eHJ5YTFzOGQifQ.WZzjWJpbHgnuyzsUlD_EJg'
 }).addTo(mymap2);
 
-
-let latlong2 = [
-  [27.391277, 73.432617],
-  [22.309425, 72.136230],
-  [11.059821, 78.387451],
-  [17.123184, 79.208824],
-  [23.473324, 77.947998],
-  [29.238478, 76.431885],
-  [21.295132, 81.828232],
-  [29.065773, 76.040497],
-  [25.794033, 78.116531],
-  [23.745127, 91.746826],
-  [17.874857, 78.100815],
-  [15.317277, 75.713890],
-  [10.850516, 76.271080],
-  [28.207609, 79.826660],
-  [26.244156, 92.537842],
-  [19.663280, 75.300293],
-  [11.127123, 78.656891],
-  [15.317277, 75.713890],
-  [22.978624, 87.747803],
-  [20.940920, 84.803467],
-  [32.084206, 77.571167]
-]
-for (let index = 0; index < latlong2.length; index++) {
-  const element = latlong2[index];
+for (let index = 0; index < latlong.length; index++) {
+  const element = latlong[index];
   var redIcon = new L.Icon({
     iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -117,4 +99,4 @@ for (let index = 0; index < latlong2.length; index++) {
 
   marker.bindPopup("Confirmed");
 }
-$('.leaflet-control-attribution').hide()
+$('.leaflet-control-attribution').hide()*/
