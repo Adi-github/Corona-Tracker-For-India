@@ -82,7 +82,9 @@ $(document).ready(function () {
           "defaultContent": "<i>Not Available</i>"
         }
       ],
-      "pageLength": 50
+      "lengthChange": false,
+      "pageLength": 4,
+      "bInfo": false
     });
   });
 });

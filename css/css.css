@@ -7,10 +7,6 @@ body {
   color: white;
 }
 
-#datas {
-  font-size: 25px;
-}
-
 #time,
 #timet {
   font-size: 15px;
@@ -24,28 +20,16 @@ body {
   cursor: pointer;
 }
 
-.quotediv {
-  margin-top: -40px !important;
-}
-
-
 .quote-hide {
   display: none;
 }
 
 .quote-box {
   text-align: center;
-  padding: 2em;
 }
 
 h2 {
   color: #458599;
-}
-
-
-#footerimg {
-  height: 50px;
-  width: 50px;
 }
 
 #impinfo {
@@ -89,19 +73,23 @@ h2 {
 footer {
   background-color: #191a1a;
   text-align: center;
-  height: 300px;
-  font-size: 20px;
+  height: 350px;
+  font-size: 30px !important;
 }
 
 footer div {
-  margin-top: 3%;
+  margin-top: 5%;
+}
+
+#c19i {
+  font-size: 23px;
 }
 
 #data,
 #cicon,
 #micon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 29px;
   margin-left: 1%;
 }
 
@@ -369,11 +357,14 @@ body {
 }
 
 th {
-  color: #acff2fb0;
+  color: red;
   text-align: center;
   background-color: black;
 }
 
+.cradius {
+  border-radius: 6px !important;
+}
 
 /** Media Queries*/
 
@@ -384,20 +375,30 @@ th {
     margin-left: 5% !important;
   }
 
+  footer {
+    font-size: 17px !important;
+    height: 400px;
+  }
+
+  #c19i {
+    font-size: 15px;
+  }
+  
+  #patable {
+    width: 65%;
+  }
+
+  #data,
+  #cicon,
+  #micon {
+    width: 20px;
+    height: 19px;
+    margin-left: 1%;
+  }
+  
+
   #lua {
     margin-right: 0%;
-  }
-
-  footer {
-    font-size: 10px;
-  }
-
-  #datas {
-    font-size: 15px;
-  }
-
-  footer h5 {
-    font-size: 15px;
   }
 
   table {
