@@ -268,7 +268,7 @@ a:visited {
 
 .tabs .tab a:hover {
   background-color: red !important;
-  color: #eee !important;
+  color: #000 !important;
 }
 
 /*Text color on hover*/

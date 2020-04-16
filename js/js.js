@@ -136,7 +136,7 @@ jQuery(document).ready(function ($) {
       $('.quote-loop').each(function () {
         var $self = $(this);
         $self.parent().queue(function (n) {
-          $self.fadeIn(1000).delay(5000).fadeOut(1000, n);
+          $self.fadeIn(1000).delay(3000).fadeOut(1000, n);
         });
       }).parent().promise().done(loop);
     }());
